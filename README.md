@@ -7,3 +7,22 @@ Implementation Notes
 --------------------
 
 The implementation is a fragment of the `org.apache.commons.logging` with a [commons-logging.properties](https://commons.apache.org/proper/commons-logging/guide.html) setting the implementation of the `LogFactory`.
+
+Building
+--------
+If you want to build this project then you need [Maven 3](https://maven.apache.org/) and add the following section to your <code>settings.xml</code>
+
+```xml
+<profile>
+  <id>photon</id>
+  <activation>
+    <activeByDefault>false</activeByDefault>
+  </activation>
+  <repositories>
+    <repository>
+      <id>photon</id>
+      <layout>p2</layout>
+      <url>http://download.eclipse.org/releases/photon</url>
+    </repository>
+  </repositories>
+</profile>

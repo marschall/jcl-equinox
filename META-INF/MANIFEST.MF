@@ -4,7 +4,7 @@ Bundle-SymbolicName: com.github.marschall.jcl-equinox;singleton:=true
 Bundle-ActivationPolicy: lazy
 Bundle-Vendor: %providerName
 Bundle-Name: %pluginName
-Bundle-Version: 0.1.0.qualifier
+Bundle-Version: 0.1.0
 Bundle-Localization: fragment
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Fragment-Host: org.apache.commons.logging;bundle-version="[1.0.0,2.0.0)"

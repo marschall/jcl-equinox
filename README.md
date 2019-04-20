@@ -1,4 +1,4 @@
-JCL Equinox
+JCL Equinox [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.marschall/com.github.marschall.jcl-equinox/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.marschall/com.github.marschall.jcl-equinox)  [![Javadocs](https://www.javadoc.io/badge/com.github.marschall/com.github.marschall.jcl-equinox.svg)](https://www.javadoc.io/doc/com.github.marschall/com.github.marschall.jcl-equinox)
 ===========
 This is an implementation of [Apache Commons Logging](https://commons.apache.org/proper/commons-logging/) using the [Equinox](https://www.eclipse.org/equinox/) [ExtendedLogService](https://bugs.eclipse.org/bugs/show_bug.cgi?id=260672).
 

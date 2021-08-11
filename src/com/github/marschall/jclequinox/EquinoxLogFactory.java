@@ -35,7 +35,7 @@ public class EquinoxLogFactory extends LogFactory {
   public EquinoxLogFactory() {
     this.attributes = Collections.synchronizedMap(new HashMap<>());
     // this is a bit hairy
-    // since we're a bundle we can't have an activator we have to work around this
+    // since we are fragment and not a bundle we can't have an activator we have to work around this
 
     Bundle bundle = FrameworkUtil.getBundle(EquinoxLogFactory.class);
     // start the bundle so that we have a bundle context
@@ -69,37 +69,37 @@ public class EquinoxLogFactory extends LogFactory {
   @Override
   public Log getInstance(Class clazz) throws LogConfigurationException {
     String className = clazz.getName();
-    Log slf4jLogger = this.loggerMap.get(className);
-    if (slf4jLogger == null) {
+    Log jclLog = this.loggerMap.get(className);
+    if (jclLog == null) {
       Bundle bundle = FrameworkUtil.getBundle(clazz);
       Logger equinoxLogger = this.logService.getLogger(bundle, className);
-      Log newLoggerAdapter = new EquinoxLog(equinoxLogger);
-      Log previousLogger = this.loggerMap.putIfAbsent(className, newLoggerAdapter);
-      if (previousLogger == null) {
-        slf4jLogger = newLoggerAdapter;
+      Log newLog = new EquinoxLog(equinoxLogger);
+      Log previousLog = this.loggerMap.putIfAbsent(className, newLog);
+      if (previousLog == null) {
+        jclLog = newLog;
       } else {
-        slf4jLogger = previousLogger;
+        jclLog = previousLog;
       }
 
     }
-    return slf4jLogger;
+    return jclLog;
   }
 
   @Override
   public Log getInstance(String name) throws LogConfigurationException {
-    Log slf4jLogger = this.loggerMap.get(name);
-    if (slf4jLogger == null) {
+    Log jclLog = this.loggerMap.get(name);
+    if (jclLog == null) {
       Logger equinoxLogger = this.logService.getLogger(name);
-      Log newLoggerAdapter = new EquinoxLog(equinoxLogger);
-      Log previousLogger = this.loggerMap.putIfAbsent(name, newLoggerAdapter);
-      if (previousLogger == null) {
-        slf4jLogger = newLoggerAdapter;
+      Log newLog = new EquinoxLog(equinoxLogger);
+      Log previousLog = this.loggerMap.putIfAbsent(name, newLog);
+      if (previousLog == null) {
+        jclLog = newLog;
       } else {
-        slf4jLogger = previousLogger;
+        jclLog = previousLog;
       }
 
     }
-    return slf4jLogger;
+    return jclLog;
   }
 
   @Override

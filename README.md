@@ -6,7 +6,7 @@ This is an implementation of [Apache Commons Logging](https://commons.apache.org
 Implementation Notes
 --------------------
 
-The implementation is a fragment of the `org.apache.commons.logging` with a [commons-logging.properties](https://commons.apache.org/proper/commons-logging/guide.html) setting the implementation of the `LogFactory`.
+The implementation is a fragment of the `org.apache.commons.logging` bundle with a [commons-logging.properties](https://commons.apache.org/proper/commons-logging/guide.html) setting the implementation of the `LogFactory`.
 
 Building
 --------

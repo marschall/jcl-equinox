@@ -14,7 +14,7 @@ If you want to build this project then you need [Maven 3](https://maven.apache.o
 
 ```xml
 <profile>
-  <id>photon</id>
+  <id>eclipse-4.20</id>
   <activation>
     <activeByDefault>false</activeByDefault>
   </activation>
@@ -22,7 +22,7 @@ If you want to build this project then you need [Maven 3](https://maven.apache.o
     <repository>
       <id>photon</id>
       <layout>p2</layout>
-      <url>http://download.eclipse.org/releases/photon</url>
+      <url>https://download.eclipse.org/eclipse/updates/4.20/</url>
     </repository>
   </repositories>
 </profile>

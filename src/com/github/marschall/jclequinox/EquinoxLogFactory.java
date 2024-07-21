@@ -22,8 +22,6 @@ public class EquinoxLogFactory extends LogFactory {
 
   private final ConcurrentMap<String, Log> loggerMap;
 
-  private final ExtendedLogService logService;
-
   /**
    * Default constructor called by commons-logging.
    */
